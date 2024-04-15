@@ -21,7 +21,7 @@ public class MainController {
                           "Daniel", "Kathleen", "Scott", "Nicole", "Mark", "Samuel", "Adam", "Lisa", "Jason"};
         for(int i = 0; i < friendsNumber; ++i) {
             friends.add(new Person(String.format("%07d", id++), names[random.nextInt(names.length)],
-                    random.nextInt(80) + 1, random.nextFloat(60) + 50));
+                    random.nextInt(80) + 1, Float.parseFloat(String.format("%.2f", random.nextFloat(60) + 50))));
         }
         System.out.println(friends);
         model.addAttribute("people", friends);
